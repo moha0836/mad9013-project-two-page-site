@@ -4,4 +4,4 @@
 
  Student Number: 040 971 6352
 
- ![Yusuf's Headshot](./yusuf-headshot.jpg) 
+ ![Yusuf's Headshot](./yusuf-headshot.jpg)
