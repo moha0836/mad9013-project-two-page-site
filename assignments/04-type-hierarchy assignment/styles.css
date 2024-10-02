@@ -145,6 +145,13 @@ textarea:not([rows]) {
 
 }
 
+/* ---------- prof comment ----------
+
+remove duplicate ruleset.
+You can actually just apply the `font-family` to the
+html in the CSS Reset.
+
+---------- end prof comment ---------- */
 /* Font Family */
 html{
     font-family: "Roboto", sans-serif;
