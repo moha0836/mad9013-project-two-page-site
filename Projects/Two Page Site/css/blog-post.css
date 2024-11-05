@@ -1,0 +1,365 @@
+/* ---------- CSS Reset ---------- */
+/* Adapted from: https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  line-height: 1.5;
+}
+
+/* Remove default margin in favor of better control in authored CSS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ol,
+ul,
+dl,
+dd {
+  margin: 0 0 1.5rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements without a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: var(--color-blue);
+  transition: all var(--transition);
+}
+
+a:not([class]):hover,
+a:not([class]):focus-visible {
+  color: var(--color-green);
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  fill: currentColor;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Ensure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anchored elements have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Remove all animations, transitions, and smooth scroll for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a202c;
+  padding: 1rem;
+}
+
+.navbar__logo {
+  width: 25%;
+  margin-right: 0.5rem;
+}
+
+.navbar__logo-img {
+  height: 3.125rem;
+}
+
+.navbar__nav {
+  display: flex;
+}
+
+.navbar__list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__link {
+  color: #E2E8F0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar__link:hover {
+  background-color: #D69E2E;
+}
+
+.navbar__link:hover,
+.navbar__link:focus {
+  color: #1a202c;
+}
+
+.banner {
+  background-image: url(../images/hero-banner.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner .container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  text-align: center;
+  padding: 3em 1.5em;
+}
+
+.banner__content {
+  width: min(35em, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.banner__title {
+  color: #D69E2E;
+  display: flex;
+  align-items: center;
+  margin-right: 3.125rem;
+}
+
+.banner__text {
+  font-size: 1.15rem;
+  color: #CBD5E0;
+  display: flex;
+  align-items: center;
+  margin-right: 3.125rem;
+}
+
+@media only screen and (min-width: 45em) {
+  .banner__title {
+      font-size: 2.069rem;
+  }
+
+  .banner__text,
+  .btn--large {
+      font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .banner__title {
+      font-size: 2.444rem;
+  }
+
+  .banner__text,
+  .btn--large {
+      font-size: 1.25rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  max-width: 75rem;
+  margin: 1.25rem auto;
+  gap: 1.25rem;
+}
+
+.main-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.section-content {
+  padding: 1.25rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.section-content h1,
+.section-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.section-content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.section-box {
+  padding: 1.25rem;
+  background-color: #f4f8ff;
+  border-left: 0.25rem solid #1a202c;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.section-container {
+  max-width: 60rem;
+  margin: 1.25rem auto;
+  padding: 1.5rem;
+  background-color: #f8f9fc; /* Matches the light background in the top sections */
+  border: 1px solid #e1e4e8; /* Matches the border color used in the top sections */
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.section-container h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #394A59; /* Ensures the header matches the top sections */
+  margin-bottom: 1rem;
+}
+
+.section-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 1.25rem;
+}
+
+/* Optional: Ensure padding consistency for inner content */
+.section-container > * {
+  padding: 0;
+}
+
+.blog-posts {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f1e9d9;
+}
+
+.blog-posts h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1a202c; 
+}
+
+.post-grid {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.post-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post-card h3 {
+  font-size: 1.25rem;
+  color: #1a202c; /* Adjust as per your brand color */
+  margin-bottom: 0.5rem;
+}
+
+.post-card p {
+  color: #000;
+  font-size: 0.9rem;
+}
+
+
+
